@@ -1,130 +1,29 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		    <title>FatalEagle</title>
+		<title>Meme Generator</title>
+		<script src="https://unpkg.com/vue/dist/vue.js" type="text/javascript"></script>
+		<link href="./main.css" rel="stylesheet" />
 	</head>
-<style>
-/* Firefox old*/
-@-moz-keyframes blink {
-	    0% {
-		            opacity:1;
-				        }
-	        50% {
-			        opacity:0;
-					    }
-		    100% {
-			            opacity:1;
-					        }
-} 
-
-	    @-webkit-keyframes blink {
-		        0% {
-				        opacity:1;
-						    }
-			    50% {
-				            opacity:0;
-						        }
-			        100% {
-					        opacity:1;
-							    }
-	    }
-	    /* IE */
-	    @-ms-keyframes blink {
-		        0% {
-				        opacity:1;
-						    }
-			    50% {
-				            opacity:0;
-						        }
-			        100% {
-					        opacity:1;
-							    }
-	    } 
-	    /* Opera and prob css3 final iteration */
-	    @keyframes blink {
-		        0% {
-				        opacity:1;
-						    }
-			    50% {
-				            opacity:0;
-						        }
-			        100% {
-					        opacity:1;
-							    }
-	    } 
-	    .blink-image {
-		        -moz-animation: blink normal 0.5s infinite ease-in-out; /* Firefox */
-				    -webkit-animation: blink normal 0.5s infinite ease-in-out; /* Webkit */
-					        -ms-animation: blink normal 0.5s infinite ease-in-out; /* IE */
-							    animation: blink normal 0.5s infinite ease-in-out; /* Opera and prob css3 final iteration */
-	    }
-	    @-moz-keyframes blink2 {
-		        0% {
-				        opacity:0;
-						    }
-			    50% {
-				            opacity:1;
-						        }
-			        100% {
-					        opacity:0;
-							    }
-	    } 
-
-	    @-webkit-keyframes blink2 {
-		        0% {
-				        opacity:0;
-						    }
-			    50% {
-				            opacity:1;
-						        }
-			        100% {
-					        opacity:0;
-							    }
-	    }
-	    /* IE */
-	    @-ms-keyframes blink2 {
-		        0% {
-				        opacity:0;
-						    }
-			    50% {
-				            opacity:1;
-						        }
-			        100% {
-					        opacity:0;
-							    }
-	    } 
-	    /* Opera and prob css3 final iteration */
-	    @keyframes blink2 {
-		        0% {
-				        opacity:0;
-						    }
-			    50% {
-				            opacity:1;
-						        }
-			        100% {
-					        opacity:0;
-							    }
-	    } 
-	    .blink-image-2 {
-		        -moz-animation: blink2 normal 0.5s infinite ease-in-out; /* Firefox */
-				    -webkit-animation: blink2 normal 0.5s infinite ease-in-out; /* Webkit */
-					        -ms-animation: blink2 normal 0.5s infinite ease-in-out; /* IE */
-							    animation: blink2 normal 0.5s infinite ease-in-out; /* Opera and prob css3 final iteration */
-	    }
-</style>
-<body style="background: transparent url('http://puu.sh/su19X/dd3704cadb.jpg') repeat center center; text-align: center;">
-	    <marquee style="color: yellow">
-	            <span style="z-index: 100; background-color: #FFFF00; font-size: 170px; text-align: center; width: 100%; margin: auto; top: 8px; border: 10px solid black;">
-			                <span style="color: black;">F</span><span style="color: #FF0000;">atalEagle</span>
-					        </span>
-						    </marquee> 
-						        <img src="http://puu.sh/su19X/dd3704cadb.jpg" alt="the man himself" style="width: 400px; height: auto;" />
-							    <blockquote style="background-color: #FFFF00;">
-								            <h2 style="font-size: 50px; padding: 30px; font-style: italic;">
-										            <a href="http://codeforces.com/profile/FatalEagle">"your code is not as pleasing to the eye as mine :^)"</a>
-											            </h2>
-												            <br />
-</body>
+	<body>
+		<div id="app">
+			<div v-bind:style="{backgroundImage: 'url('+picture+')'}" style="background-color: transparent; background-repeat: repeat; background-position: center center; text-align: center;">
+				<marquee v-bind:style="{color: primaryColor}">
+					<span v-bind:style="{backgroundColor: primaryColor, borderColor: secondaryColor}" style="z-index: 100; font-size: 170px; text-align: center; width: 100%; margin: auto; top: 8px; border-style:solid; border-width:10px;">
+						<span v-bind:style="{color: secondaryColor}">{{name}}</span>
+					</span>
+				</marquee> 
+				<img v-bind:src="picture" alt="the man himself" style="width: 400px; height: auto;" />
+				<blockquote v-bind:style="{backgroundColor: primaryColor}">
+					<h2 style="font-size: 50px; padding: 30px; font-style: italic;">
+						<a href="http://codeforces.com/profile/FatalEagle" v-bind:style="{color: secondaryColor}">"your code is not as pleasing to the eye as mine :^)"</a>
+					</h2>
+				</blockquote>
+				<br />
+			</div>
+		</div>
+		<script src="./main.js" type="text/javascript"></script>
+	</body>
 </html>
 
 
