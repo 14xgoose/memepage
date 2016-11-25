@@ -1,5 +1,5 @@
 function _GET(addr) {
-	addr = decodeURI(addr.slice(addr.indexOf('?')+1)).split('&');
+	addr = decodeURIComponent(addr.slice(addr.indexOf('?')+1)).split('&');
 	var params = {};
 	for (var i=0; i<addr.length; i++) {
 		var vals = addr[i].split('=');
