@@ -13,9 +13,14 @@ var params = _GET(document.location.toString());
 var app = new Vue({
   el: '#app',
   data: {
-    name: 'FatalEagle',
-    picture: 'http://puu.sh/su19X/dd3704cadb.jpg',
-    primaryColor: 'yellow',
-    secondaryColor: 'black'
+    name: params['name'],
+    picture: params['photo'],
+    primaryColor: params['color1'],
+    secondaryColor: params['color2']
   }
 })
+
+/*name: 'FatalEagle',
+picture: 'http://puu.sh/su19X/dd3704cadb.jpg',
+primaryColor: 'yellow',
+secondaryColor: 'black'*/
