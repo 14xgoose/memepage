@@ -16,7 +16,9 @@ var app = new Vue({
     name: params['name'],
     picture: params['photo'],
     primaryColor: params['color1'],
-    secondaryColor: params['color2']
+    secondaryColor: params['color2'],
+    text: params['text'],
+    ref: params['href']
   }
 })
 

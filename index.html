@@ -16,7 +16,7 @@
 				<img v-bind:src="picture" alt="the man himself" style="width: 400px; height: auto;" />
 				<blockquote v-bind:style="{backgroundColor: primaryColor}">
 					<h2 style="font-size: 50px; padding: 30px; font-style: italic;">
-						<a href="http://codeforces.com/profile/FatalEagle" v-bind:style="{color: secondaryColor}">"your code is not as pleasing to the eye as mine :^)"</a>
+						<a v-bind:href="ref" v-bind:style="{color: secondaryColor}">"{{text}}"</a>
 					</h2>
 				</blockquote>
 				<br />
